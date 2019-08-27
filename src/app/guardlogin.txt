@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/47138872/how-to-display-menu-bar-only-after-log-in
+https://medium.com/developing-an-angular-4-web-app/adding-routes-for-login-and-home-view-components-be676d786471

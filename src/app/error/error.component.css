@@ -1,0 +1,25 @@
+.container{
+  text-align: center;
+  align-content: cener;
+  padding-top: 80px;
+  padding:7%;
+  margin:7%;
+
+}
+h4,p{
+   font-family: 'Hepta Slab', serif;
+
+}
+
+img{
+  width:80%;
+  height:90%;
+}
+body{
+  padding:0%;
+  margin:0%;
+}
+
+button{
+  color:#69F0AE;
+}
