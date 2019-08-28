@@ -1,0 +1,53 @@
+<link href = "https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap" rel = "stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-z col-xl-6">
+
+<mat-card  class = "mat-card">
+<mat-card-header style = "font-family: 'Source Serif Pro', serif;color:blue;" >
+    Sign Up
+  </mat-card-header>
+
+    <form  [formGroup] = "registerForm" >
+
+        <mat-form-field class = "example-full-width"  style  = "font-family: 'Source Serif Pro', serif;" >
+        <input          type  = "text" matInput pattern="[a-zA-Z]+" required  placeholder = "Firstname" formControlName = "firstname" #firstname >
+          <mat-error *ngIf="registerForm.controls['firstname'].invalid">{{getFirstname()}}</mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field class = "example-full-width" style  = "font-family: 'Source Serif Pro', serif;">
+        <input     type  = "text" matInput pattern="[a-zA-Z]+" required  placeholder = "Lastname" formControlName = "lastname" #lastname>
+          <mat-error *ngIf="registerForm.controls['lastname'].invalid">{{getLastname()}}</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class = "example-full-width" style = "font-family: 'Source Serif Pro', serif;">
+        <input type="email"  title = "Not Valid Email Address" matInput required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder = "Email"  formControlName = "email" #email>
+          <mat-error *ngIf="registerForm.controls['email'].invalid">{{getEmail()}}</mat-error>
+          </mat-form-field>
+
+
+        <mat-form-field class = "example-full-width" style = "font-family: 'Source Serif Pro', serif;">
+        <input   type  = "password" matInput placeholder = "Password"  formControlName = "password" #password>
+            <mat-error *ngIf="registerForm.controls['password'].invalid">{{getPassword()}}</mat-error>
+          </mat-form-field>
+
+
+          <mat-form-field class = "example-full-width" style   = "font-family: 'Source Serif Pro', serif;">
+          <input type  = "number" matInput placeholder = "Mobile" pattern="^\d{10}$"  required formControlName = "mobile" #mobile>
+              <mat-error *ngIf="registerForm.controls['mobile'].invalid">{{getMobile()}}</mat-error>
+            </mat-form-field>
+
+
+
+<br><br>
+        <button mat-raised-button color = "primary" (click) = "addUser(firstname.value,lastname.value,email.value,password.value,mobile.value)">Register</button>
+      </form>
+
+</mat-card>
+
+</div>
+</div>
+</div>

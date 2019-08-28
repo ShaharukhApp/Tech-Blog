@@ -1,0 +1,18 @@
+
+.example-full-width {
+   width: 70%;
+}
+
+.mat-card{
+  margin:3%;
+  padding:3%;
+  margin-top:15%;
+  text-align: center;
+  left:0%;
+
+}
+
+body{
+  padding:0%;
+  margin: 0%;
+}

@@ -1,0 +1,60 @@
+<html>
+
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-lg-z col-xl-6">
+
+      <mat-card class="mat-card">
+          <h5>Rosetta</h5>
+
+        <mat-card-content>
+
+
+            <form  [formGroup]="loginForm">
+                <div  style="text-align: center;color: red; font-family: 'Source Serif Pro', serif;">
+
+                    {{loginservice.userCrdential}}
+                </div>
+
+
+                  <mat-form-field class="example-full-width"  style="font-family: 'Source Serif Pro', serif;">
+                    <input  matInput type="email"  placeholder="Email" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  formControlName="email" #email >
+                    <mat-error *ngIf="loginForm.controls['email'].invalid">{{getEmail()}}</mat-error>
+
+                  </mat-form-field><br><br>
+
+                  <mat-form-field class="example-full-width" style="font-family: 'Source Serif Pro', serif;">
+                    <input type="password" style="width:100%;" matInput placeholder="Password" formControlName="password" #password>
+                    <mat-error  *ngIf="isFieldInvalid('email')">Password is Required</mat-error>
+                  </mat-form-field>
+
+
+                  <br><br>
+                  <button  mat-raised-button color="primary" class="example-full-width" (click)="Login(email.value,password.value)" type="submit">Login</button>
+                </form><br>
+
+                <a routerLink="/forget">Forget Password</a>
+                <a style="color:#4EAF50" class="nav-link" routerLink="/register">Create Account</a>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-6 col-lg-z col-xl-4" style="margin:8%;padding:8%;" >
+        <button  mat-raised-button   style="background-color:#F7F7F7;text-align: center;width:100%;"   type="submit"  (click)="signInWithGoogle()"><i class="fab fa-google"></i>&nbsp;&nbsp; Login in With Google</button>
+       <h6>{{GoogleResponsedata.firstname + ' ' + GoogleResponsedata.lastname}}</h6>
+
+
+ <br><br> <button type="button" mat-raised-button color="primary"  style="text-align: center;width:100%;"  type="submit" (click)="signInWithFB()"><i class="fab fa-facebook-square"></i>&nbsp;&nbsp;Login in With Facebook</button>
+        <h6>{{FacebookResponseData.firstname + ' '+ FacebookResponseData.lastname}}</h6>
+    </div>
+
+  </div>
+
+
+</div>
+
+</html>

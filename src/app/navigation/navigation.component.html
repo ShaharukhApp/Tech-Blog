@@ -44,7 +44,24 @@
 
             </li>
 
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" [ngbCollapse]="isCollapsed" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   <i class="fa fa-newspaper" aria-hidden="true"></i>
 
+                  POSTS
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" routerLink="post/userinfo">ANGULAR 7</a>
+                  <a class="dropdown-item">UBUNTU</a>
+                  <a class="dropdown-item">WINDOWS</a>
+                   <a class="dropdown-item">NODE JS</a>
+  
+            </div>
+
+            </li>
+ 
+ 
                <li class="nav-item active">
                           <a class="nav-link" routerLink="portfolio"><i class="fa fa-briefcase" aria-hidden="true"></i>
                             PORTFOLIO<span class="sr-only">(current)</span></a>
@@ -56,7 +73,7 @@
                         </li>
 
                         <li class="nav-item active">
-                          <a class="nav-link" routerLink="portfolio"><i class="fa fa-briefcase" aria-hidden="true"></i>
+                          <a class="nav-link" routerLink="support"><i class="fa fa-briefcase" aria-hidden="true"></i>
                             SUPPORT<span class="sr-only">(current)</span></a>
                         </li>
           </ul>

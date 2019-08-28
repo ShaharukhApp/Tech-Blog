@@ -11,15 +11,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ReactiveFormsModule} from '@angular/forms';
 import { CountdownModule } from 'ngx-countdown';
 import { HomeComponent } from './home/home.component';
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import {SocialLoginModule, AuthServiceConfig, LoginOpt} from 'angularx-social-login';
 import {GoogleLoginProvider , FacebookLoginProvider} from 'angularx-social-login';
 import { FooterComponent } from './footer/footer.component';
-import {JwtvalidInterceptor} from './jwtvalid.interceptor';
 import {OnlinePreparationComponent} from './portfolio/online-preparation/online-preparation.component';
 import { PortfolioHomeComponent } from './portfolio/portfolio-home/portfolio-home.component';
 import { ErrorComponent } from './error/error.component';
+import { RegisterComponent } from './register/register.component';
+import { Angular7Component } from './post/angular7/angular7.component';
+import {LoginComponent} from './login/login.component';
+import {PasswordrecoveryComponent} from './passwordrecovery/passwordrecovery.component';
+import {UserinformComponent} from './post/userinform/userinform.component';
+import { SupportComponent } from './support/support.component';
 
 const googleLoginOptions: LoginOpt = {
   scope: 'profile email'
@@ -51,6 +56,12 @@ export function ProvideConfig(){
     OnlinePreparationComponent,
     PortfolioHomeComponent,
     ErrorComponent,
+    RegisterComponent,
+    Angular7Component,
+    LoginComponent,
+    PasswordrecoveryComponent,
+    UserinformComponent,
+    SupportComponent
 
 
 
@@ -86,12 +97,7 @@ export function ProvideConfig(){
     {
       provide: AuthServiceConfig,
       useFactory: ProvideConfig
-    },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: JwtvalidInterceptor,
-      multi: true
-    }
+    } 
   ],
   bootstrap: [AppComponent]
 })
