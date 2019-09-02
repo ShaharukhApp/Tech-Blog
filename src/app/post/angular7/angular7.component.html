@@ -1,3 +1,47 @@
-<p>
-  angular7 works!
-</p>
+<link href="https://fonts.googleapis.com/css?family=Hepta+Slab|Roboto+Slab&display=swap" rel="stylesheet">
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm" style="margin:2%;">
+          <div class="card" style="width:50rem;">
+
+            <form  [formGroup]="PostForm">
+            <div class="card-body">
+              <h4>Weclome to the post publishing page</h4>
+
+              <label for="comment">Subject</label>
+              <textarea class="form-control" rows="5" formControlName="question_heading" #question_heading></textarea>
+
+              <br><br>
+             
+    
+              <div class="form-group">
+                  <label for="comment">Comment:</label>
+                  <textarea class="form-control" rows="5" formControlName="post_body" #post_body></textarea>
+                </div>
+                <button type="button" (click)="User_Post()"  class="btn btn-primary">Post</button>
+
+                </div>
+              </form>
+            </div>
+      </div>
+     
+
+      <div class="col-sm" style="margin:2%;padding:3%;">
+          <h6
+          >Subscribe Blog to via Email</h6>
+          <div class="card" style="width:20rem;height:40%;padding:2%;margin:2%;">
+
+              <div class="card-body" class="form-group" style="padding:2%;margin:2%;">
+                
+
+                    <input class="padding:2%;margin:2%;" placeholder="Email" type="text" class="form-control"><br>
+
+                    <button type="submit" class="btn btn-success">Subscribe</button>
+                  </div>
+              </div>
+      </div>
+     
+     
+      </div>
+  </div>

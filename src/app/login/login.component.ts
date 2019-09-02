@@ -13,9 +13,11 @@ import {AuthService, GoogleLoginProvider, SocialUser, FacebookLoginProvider} fro
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
+ 
   private FormSubmittedAttempt: boolean;
 
   public user: SocialUser;
+  public LOGERROR: string;
   public loggedIn: boolean;
 
   public GoogleResponsedata = {
@@ -33,7 +35,8 @@ export class LoginComponent implements OnInit {
     id: ''
   }
 
-  constructor(private fb: FormBuilder, public loginservice: LoginService, private authService: AuthService) {
+  constructor(private fb: FormBuilder, public loginservice: LoginService, private authService: AuthService,
+              private router: Router) {
 
     this.createForm();
    }
@@ -107,8 +110,13 @@ export class LoginComponent implements OnInit {
     Login(email, password){
 
     if(this.loginForm.valid){
-      this.loginservice.Login(email, password);
-    }
+      this.loginservice.Login(email, password).subscribe((islogged) => {
+        localStorage.setItem('token',JSON.stringify(islogged));
+        this.router.navigate(['Angular7']);
+      }, (error) =>{
+          this.LOGERROR = error.error.failed;
+      });
+     }
 
     this.FormSubmittedAttempt = true;
 

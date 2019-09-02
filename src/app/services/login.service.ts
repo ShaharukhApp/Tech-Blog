@@ -13,10 +13,11 @@ export class LoginService {
   constructor(private http: HttpClient, private router: Router) { }
 
   public userCrdential: string;
+ 
 
   public logResponse: any[];
 
-  uri = 'http://localhost:8080/user';
+  uri = 'http://localhost:5000/login';
 
   Login(email, password) {
 
@@ -24,15 +25,11 @@ export class LoginService {
         email: email,
         password: password
       };
-
-    localStorage.setItem('session_id', 'Shaharukh');
-    this.loggedIn.next(true);
-    this.router.navigate(['']);
-
-  }
-
+    
+    return this.http.post(`${this.uri}`,obj);
+    }
   isLogggedin(){
-        return localStorage.getItem('session_id');
+        return localStorage.getItem('token');
       }
 
    logout() {

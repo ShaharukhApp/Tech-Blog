@@ -67,7 +67,11 @@ addUser(firstname,lastname,email,password,mobile){
       duration: 2000,
     })
   };
-  //this.registerservice.addUser(firstname,lastname,email,password,mobile);
+  this.registerservice.addUser(firstname,lastname,email,password,mobile).subscribe((res)=>{
+    console.log(res);
+  },(error)=>{
+    console.log(error);
+  })
 
 
   }

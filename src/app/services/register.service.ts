@@ -6,7 +6,7 @@ import {Router} from '@angular/router';
 })
 export class RegisterService {
 
-  uri = 'http://localhost:8080/user/register';
+  uri = 'http://localhost:5000/register';
 
   constructor(private http : HttpClient, private router: Router) { }
 
@@ -20,15 +20,10 @@ export class RegisterService {
      Mobile   : mobile
     };
 
-    this.http.post(`${this.uri}`, userobject).subscribe((response : any[])=> {
-      console.log(response);
-      this.router.navigate(['home']);
-    },error => {
-      console.log(error);
-      this.router.navigate(['register']);
-    });
+    console.log(userobject);
 
-
+    return this.http.post(`${this.uri}`, userobject);
+ 
 }
 
 }

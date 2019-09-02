@@ -14,7 +14,7 @@ export class UserinformComponent implements OnInit {
   }
 
   Navigates(){
-    this.route.navigate(['post/Angular7']);
+    this.route.navigate(['Angular7']);
 
   }
 

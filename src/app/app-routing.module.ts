@@ -11,6 +11,8 @@ import { RegisterComponent } from './register/register.component';
 import {PasswordrecoveryComponent} from './passwordrecovery/passwordrecovery.component';
 import {UserinformComponent} from './post/userinform/userinform.component';
 import {SupportComponent} from './support/support.component';
+import {PublicqComponent} from './publicq/publicq.component';
+import {NmapComponent} from './home_files/nmap/nmap.component';
 const routes: Routes = [
 
 
@@ -26,11 +28,15 @@ const routes: Routes = [
 
   {path: 'portfolio/online-preparation', component: OnlinePreparationComponent},
 
-  {path: 'post/Angular7', component: Angular7Component, canActivate:[AuthGuard]},
+  {path: 'Angular7', component: Angular7Component, canActivate:[AuthGuard]},
 
   {path: 'post/userinfo', component:UserinformComponent},
 
   {path: 'support', component: SupportComponent},
+
+  {path: 'publicQ&A', component: PublicqComponent},
+
+  {path: 'nmap', component: NmapComponent},
 
   {path: '**', component: ErrorComponent},
 

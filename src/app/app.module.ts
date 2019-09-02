@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ReactiveFormsModule} from '@angular/forms';
 import { CountdownModule } from 'ngx-countdown';
 import { HomeComponent } from './home/home.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import {SocialLoginModule, AuthServiceConfig, LoginOpt} from 'angularx-social-login';
 import {GoogleLoginProvider , FacebookLoginProvider} from 'angularx-social-login';
@@ -25,7 +25,10 @@ import {LoginComponent} from './login/login.component';
 import {PasswordrecoveryComponent} from './passwordrecovery/passwordrecovery.component';
 import {UserinformComponent} from './post/userinform/userinform.component';
 import { SupportComponent } from './support/support.component';
-
+import { PublicqComponent } from './publicq/publicq.component';
+import {JwtvalidInterceptor} from './jwtvalid.interceptor';
+import {PasswordsetComponent} from './passwordset/passwordset.component';
+import { NmapComponent } from './home_files/nmap/nmap.component';
 const googleLoginOptions: LoginOpt = {
   scope: 'profile email'
 };
@@ -61,7 +64,10 @@ export function ProvideConfig(){
     LoginComponent,
     PasswordrecoveryComponent,
     UserinformComponent,
-    SupportComponent
+    SupportComponent,
+    PublicqComponent,
+    PasswordsetComponent,
+    NmapComponent
 
 
 
@@ -97,7 +103,12 @@ export function ProvideConfig(){
     {
       provide: AuthServiceConfig,
       useFactory: ProvideConfig
-    } 
+    } ,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtvalidInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
