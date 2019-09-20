@@ -1,0 +1,14 @@
+.container{
+padding-top:80px;
+}
+img{
+    width:70%;
+    height:70%;
+}
+
+mat-card{
+padding:2%;
+margin:2%;
+font-family: 'Roboto Slab', serif;
+
+}

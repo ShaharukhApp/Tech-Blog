@@ -29,6 +29,7 @@ import { PublicqComponent } from './publicq/publicq.component';
 import {JwtvalidInterceptor} from './jwtvalid.interceptor';
 import {PasswordsetComponent} from './passwordset/passwordset.component';
 import { NmapComponent } from './home_files/nmap/nmap.component';
+import { UbuntuinstalltionComponent } from './ubuntu/ubuntuinstalltion/ubuntuinstalltion.component';
 const googleLoginOptions: LoginOpt = {
   scope: 'profile email'
 };
@@ -67,7 +68,8 @@ export function ProvideConfig(){
     SupportComponent,
     PublicqComponent,
     PasswordsetComponent,
-    NmapComponent
+    NmapComponent,
+    UbuntuinstalltionComponent
 
 
 

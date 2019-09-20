@@ -13,6 +13,7 @@ import {UserinformComponent} from './post/userinform/userinform.component';
 import {SupportComponent} from './support/support.component';
 import {PublicqComponent} from './publicq/publicq.component';
 import {NmapComponent} from './home_files/nmap/nmap.component';
+import {UbuntuinstalltionComponent} from './ubuntu/ubuntuinstalltion/ubuntuinstalltion.component';
 const routes: Routes = [
 
 
@@ -37,6 +38,8 @@ const routes: Routes = [
   {path: 'publicQ&A', component: PublicqComponent},
 
   {path: 'nmap', component: NmapComponent},
+
+  {path: 'ubuntu_installation', component: UbuntuinstalltionComponent},
 
   {path: '**', component: ErrorComponent},
 
