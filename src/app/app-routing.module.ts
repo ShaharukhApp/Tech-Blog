@@ -14,6 +14,7 @@ import {SupportComponent} from './support/support.component';
 import {PublicqComponent} from './publicq/publicq.component';
 import {NmapComponent} from './home_files/nmap/nmap.component';
 import {UbuntuinstalltionComponent} from './ubuntu/ubuntuinstalltion/ubuntuinstalltion.component';
+import {InstallnodejsubuntuComponent} from './nodejs/installnodejsubuntu/installnodejsubuntu.component';
 const routes: Routes = [
 
 
@@ -40,6 +41,8 @@ const routes: Routes = [
   {path: 'nmap', component: NmapComponent},
 
   {path: 'ubuntu_installation-19-04', component: UbuntuinstalltionComponent},
+
+  {path: 'ubuntu/nodejs_installation', component: InstallnodejsubuntuComponent},
 
   {path: '**', component: ErrorComponent},
 

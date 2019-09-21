@@ -1,0 +1,47 @@
+.container{
+    padding-top:80px;
+    }
+    body{
+        padding:0%;
+        margin:0%;
+    }
+    img{
+        width:70%;
+        height:70%;
+    }
+    
+    mat-card{
+    padding:2%;
+    margin:2%;
+    font-family: 'Roboto Slab', serif;
+    
+    }
+    h2{
+        padding-top:80px;
+        padding-left:7%;
+        color:blue;
+    
+    }
+    
+    span,p{
+        font-family: 'Open Sans', sans-serif;
+    
+        Font-weight: 400;
+    
+        font-size: 18px;
+       
+    }
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        height:100%;
+      
+      }
+      
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+    tr{
+        padding:5%;
+        margin:5%;
+    }
