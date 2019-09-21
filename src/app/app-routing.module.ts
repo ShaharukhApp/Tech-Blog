@@ -39,7 +39,7 @@ const routes: Routes = [
 
   {path: 'nmap', component: NmapComponent},
 
-  {path: 'ubuntu_installation', component: UbuntuinstalltionComponent},
+  {path: 'ubuntu_installation-19-04', component: UbuntuinstalltionComponent},
 
   {path: '**', component: ErrorComponent},
 
