@@ -15,6 +15,8 @@ import {PublicqComponent} from './publicq/publicq.component';
 import {NmapComponent} from './home_files/nmap/nmap.component';
 import {UbuntuinstalltionComponent} from './ubuntu/ubuntuinstalltion/ubuntuinstalltion.component';
 import {InstallnodejsubuntuComponent} from './nodejs/installnodejsubuntu/installnodejsubuntu.component';
+import {OpensshComponent} from './home_files/openssh/openssh.component';
+import {PrivacyComponent} from './privacy/privacy/privacy.component';
 const routes: Routes = [
 
 
@@ -44,6 +46,10 @@ const routes: Routes = [
 
   {path: 'ubuntu/nodejs_installation', component: InstallnodejsubuntuComponent},
 
+  {path: 'openssh', component: OpensshComponent},
+
+  {path: 'privacy', component: PrivacyComponent},
+ 
   {path: '**', component: ErrorComponent},
 
  

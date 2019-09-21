@@ -1,17 +1,18 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
 <title>Ubuntu Installation</title>
 
-<div class="card" style="width:50rem;padding:1%;margin:1%;">
+<div class="container">
+<div class="card" style="width:60rem;padding:1%;margin:1%;">
     <h2 style="color:black;">How to Install Node Js and NPM On Ubuntu with PPA</h2>
 
-    <div class="container">
-
+          <hr>
         <div class="row">
           <div class="col">
               <span>
-                  <b>Node Js</b> , is a platform build on chrome v8 javascript runtime for easily buidling application, scalable netwrok application 
+                  <b>Node Js</b> , is a opensource, cross-platform build on chrome v8 javascript runtime environment for easily buidling application, scalable netwrok application 
                 </span>
           </div>
         </div>
@@ -31,125 +32,97 @@
       
         <hr>
         Download Node Js From Following Link<br>
-        <a href="https://nodejs.org/en/" target="_blank">Node Js</a>
+        <a href="https://nodejs.org/en/" target="_blank">https://nodejs.org/en/</a>
       <hr>
-        <h3 style="color:blue;padding-top:2%;">Ubuntu 19.04 Installation Guides</h3>
+        <h3 style="color:blue;padding-top:2%;">Node Js Installation Guides</h3>
         
       
       <table>
         <tr>
           <td>
-              <b>Step 1:</b>
-              <p>
-                The First step you need to in order to install Ubuntu 19.04 is to burn an Ubuntu ISO Image with Compatible USB Drive, then insert Bootable Media into your appropriate drive
-        
-        
+              <b>Step 1 :<span>Add Node Js PPA</span></b><hr>
+              <div style="background-color:#E6E9EC;">
+              <p><br>
+                $ sudo apt-get install curl
               </p>
-        
+              <p>
+                $ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+
+              </p>
+            </div>
           </td>
         </tr>
         
         <tr>
             <td>
-                <b>Step 2:</b>
+                <b>Step 2:Install Node Js On Ubuntu</b><hr>
                 <p>
-                   After Machine Boot Media Press  the ESC to get GRUB Menu Screen
+                   After successfully add Node.Js PPA to Ubuntu System, now go ahead and execute following command  to install Node.Js using  apt-get, This 
+                   will also install Node.Js with NPM
                 </p>
+
+                <div style="background-color:#E6E9EC;padding:1%;margin:1%;">
+                  <br>
+                
+                  <p>
+                    $ sudo apt-get install nodejs
+    
+                  </p>
+                </div>
             </td>
+
           </tr><br>
           <tr>
-              <img src="assets/images/ubuntu/grubmenu.png" alr="error">
+              <img src="assets/images/nodejs/first.png" alr="error">
           </tr>
       
          <br><br>
           <tr>
-              <b>Step 3:</b>
-          <p>Next Step choose language for your system, and press continue button to go ahead</p>
-         
-          </tr>
-      
-          <tr>
-              <img src="assets/images/ubuntu/keyboardlayout.jpg" alr="error">
-          </tr>
-      
-          <br><br>
-          <tr>
-      
-              <b>Step 4:</b>
-              <p>on next step , you have to go with Install Ubuntu Option , if you go with Try Ubuntu  option ,it will be redirected you system live environment,
-                so be carefull in selecting option other wise you reiterate entire steps
-              </p>
-          </tr>
-      
-          <tr>
-              <img src="assets/images/ubuntu/first.png" alr="error">
-          </tr>
-          <br><br>
-          <tr>
-              <b>Step 5:</b>
-        <p>you have to carefully select option here else you messed up with your system, if you go with <b>Erase disk and Install Ubuntu option,</b> it will erase your entire hard drive and installed fresh ubuntu on your hard drive,
-        if you go with <b>Something else </b> option then system will install fresh ubuntu ,but it will not deleterious your personal data or files
-        </p>
-       
-          </tr>
-      
-          <tr>
-              <img src="assets/images/ubuntu/second.png" alr="error">
-      
-          </tr>
-          <br><br>
-          <tr>
-              <b>Step 6:</b>
+              <b>Step 3: Check Node Js & NPM Version</b><br><br><hr>
               <p>
-                Next, the installer check if your system has internet connectivity and ask you for installation, Select Normal and check tick <b>Download updates while installing ubuntu</b> , actually what this tick do it check and found new packages then installer will install all these packages along with ubuntu installation
+                move ahead and type given below command to check the installed version of Node Js and NPM
               </p>
+              <h6 style="color:blue;">check for node js version</h6>
+              <div style="background-color:#E6E9EC;">
+               
+                <p><br>
+                  $ node -v
+                </p>
+                <p>
+                    v12.2.0
+
+                </p>
+               
+              
+              </div>
+          </tr>
+
+          <tr>
+            <td>
+                <h6 style="color:blue;">also, check npm version</h6>
+
+                <div style="background-color:#E6E9EC;">
+           
+                       <p>
+                          npm -v  
+                    </p>
+                    <p>
+                        6.10.0
+    
+                    </p>
+                  </div>
+            </td>
           </tr>
       
           <tr>
-              <img src="assets/images/ubuntu/third.png" alr="error">
+              <img src="assets/images/nodejs/second.png" alr="error">
           </tr>
+      
           <br><br>
-          <tr>
-              <b>Step 7:</b>
-              <p>
-                now here you have to click on continue button for installation , but if you changed your decision and want to go with other installation type then click on go back button 
-                to select other installation type
-              </p>
-            
-          </tr>
-      
-          <tr>
-              <img src="assets/images/ubuntu/four.png" alr="error">
-      
-          </tr>
-          <br><br>
-          <tr>
-              <b>Step 8:</b>
-              <p>
-                as You can now see Ubuntu 19.04 is installing
-              </p>
-          </tr>
-      
-          <tr>
-              <img src="assets/images/ubuntu/five.jpg" alr="error">
-          </tr>
-          <br><br>
-          <tr>
-              <b>step 9:</b>
-              <p>
-                when this screen comes up on your machine screen , that means you have to provide some details related your account,and then click on Continue button for further installation
-              </p>
-          </tr>
-      
-          <tr>
-              <img src="assets/images/ubuntu/six.png" alr="error">
-          </tr>
-      
-          <tr>
-              <p style="padding-left:120px;color:blue;padding:2%;margin:2%;">That's all, you have installed Ubuntu 19.04 on your machine,please stay tuned for next article related Ubuntu 19.04 </p>
-          </tr>
+           <tr>
+             <p>you have successfully installed Node Js on your Ubuntu System , Stay Tuned to get another post releated to nodejs</p>
+           </tr>
       </table>
       
       </div>
-      
     </div>

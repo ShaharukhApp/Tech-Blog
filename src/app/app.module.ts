@@ -31,6 +31,8 @@ import {PasswordsetComponent} from './passwordset/passwordset.component';
 import { NmapComponent } from './home_files/nmap/nmap.component';
 import { UbuntuinstalltionComponent } from './ubuntu/ubuntuinstalltion/ubuntuinstalltion.component';
 import { InstallnodejsubuntuComponent } from './nodejs/installnodejsubuntu/installnodejsubuntu.component';
+import { OpensshComponent } from './home_files/openssh/openssh.component';
+import { PrivacyComponent } from './privacy/privacy/privacy.component';
 const googleLoginOptions: LoginOpt = {
   scope: 'profile email'
 };
@@ -71,7 +73,9 @@ export function ProvideConfig(){
     PasswordsetComponent,
     NmapComponent,
     UbuntuinstalltionComponent,
-    InstallnodejsubuntuComponent
+    InstallnodejsubuntuComponent,
+    OpensshComponent,
+    PrivacyComponent
 
 
 
