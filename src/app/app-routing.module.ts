@@ -44,7 +44,7 @@ const routes: Routes = [
 
   {path: 'ubuntu_installation-19-04', component: UbuntuinstalltionComponent},
 
-  {path: 'ubuntu/nodejs_installation', component: InstallnodejsubuntuComponent},
+  {path: 'nodejs_installation', component: InstallnodejsubuntuComponent},
 
   {path: 'openssh', component: OpensshComponent},
 

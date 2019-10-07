@@ -1,5 +1,8 @@
 .container{
 padding-top:100px;
+margin-top: auto;
+margin-bottom: auto;
+
 
 }
 
@@ -15,7 +18,11 @@ img{
  
 
 span,p{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
 
     Font-weight: 400;
 
