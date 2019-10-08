@@ -17,6 +17,7 @@ import {UbuntuinstalltionComponent} from './ubuntu/ubuntuinstalltion/ubuntuinsta
 import {InstallnodejsubuntuComponent} from './nodejs/installnodejsubuntu/installnodejsubuntu.component';
 import {OpensshComponent} from './home_files/openssh/openssh.component';
 import {PrivacyComponent} from './privacy/privacy/privacy.component';
+import {PuttyComponent } from './home_files/putty/putty.component';
 const routes: Routes = [
 
 
@@ -50,6 +51,8 @@ const routes: Routes = [
 
   {path: 'privacy', component: PrivacyComponent},
  
+  {path: 'putty', component: PuttyComponent},
+  
   {path: '**', component: ErrorComponent},
 
  

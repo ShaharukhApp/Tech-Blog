@@ -33,6 +33,8 @@ import { UbuntuinstalltionComponent } from './ubuntu/ubuntuinstalltion/ubuntuins
 import { InstallnodejsubuntuComponent } from './nodejs/installnodejsubuntu/installnodejsubuntu.component';
 import { OpensshComponent } from './home_files/openssh/openssh.component';
 import { PrivacyComponent } from './privacy/privacy/privacy.component';
+import { PuttyComponent } from './home_files/putty/putty.component';
+import {ScrolltopService} from './scrolltop.service';
 const googleLoginOptions: LoginOpt = {
   scope: 'profile email'
 };
@@ -75,7 +77,8 @@ export function ProvideConfig(){
     UbuntuinstalltionComponent,
     InstallnodejsubuntuComponent,
     OpensshComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    PuttyComponent
 
 
 
@@ -108,6 +111,7 @@ export function ProvideConfig(){
 
   ],
   providers: [
+    ScrolltopService,
     {
       provide: AuthServiceConfig,
       useFactory: ProvideConfig

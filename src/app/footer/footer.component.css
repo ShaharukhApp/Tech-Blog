@@ -10,3 +10,8 @@ h4,span,h6{
   font-family: 'Hepta Slab', serif;
 
 }
+
+td{
+  padding:4%;
+  margin:4%;
+}

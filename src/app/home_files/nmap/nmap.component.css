@@ -1,17 +1,30 @@
+ .container{
+     padding-top: 100px;
+ }
+
 h6{
     font-family: 'Hepta Slab', serif;
   
    }
 
-body{
-    padding:0%;
-    margin:0%;
+   span,p{
+    font-family: 'Roboto', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+
+    Font-weight: 400;
+
+    font-size: 18px;
+   
 }
 
-.container{
-    padding-top:10px;
 
-}
 li{
     list-style: none;
 } 
+img{
+    width:70%;
+    height:70%;
+}
