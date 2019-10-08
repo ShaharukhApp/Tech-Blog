@@ -5,4 +5,6 @@
 <url><loc>https://visionrosetta.in/ubuntu/nodejs_installation</loc><priority>0.5</priority></url>
 <url><loc>https://visionrosetta.in/openssh</loc><priority>0.5</priority></url>
 <url><loc>https://visionrosetta.in/putty</loc><priority>0.5</priority></url>
+<url><loc>https://visionrosetta.in/nmap</loc><priority>0.5</priority></url>
+
 </urlset>
